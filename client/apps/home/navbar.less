@@ -1,0 +1,303 @@
+@import '../../variable.less';
+.nav {
+  margin-bottom: 0px;
+  padding-left: 0px;
+  list-style: outside none none;
+  ul {
+    height: 48px;
+  }
+  > li,
+  > li a {
+    display: block;
+    position: relative;
+  }
+  .angle-down {
+    font-size: 27px;
+    vertical-align: middle;
+  }
+  .ant-menu-horizontal > .ant-menu-item-selected,
+  .ant-menu {
+    border-bottom: none;
+  }
+  .ant-menu-horizontal > .ant-menu-item > .ant-badge > a {
+    display: block;
+    color: #fcfcfc;
+  }
+  .ant-menu-horizontal > .ant-menu-item > .ant-badge > a:hover {
+    color: #fff;
+  }
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    padding: 0 12px;
+  }
+  .ant-menu-item,
+  .ant-menu-submenu-title {
+    .anticon {
+      font-size: 24px;
+      vertical-align: middle;
+      line-height: 18px;
+      margin-right: 0;
+    }
+    .active {
+      color: #1890ff;
+    }
+  }
+  .ant-menu-sub {
+    width: 100px;
+  }
+}
+.ant-layout-header {
+  padding: 0;
+  z-index: 1000;
+}
+.layout-header {
+  border: 0;
+  margin-bottom: 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s ease;
+}
+.navbar {
+  display: flex;
+  min-height: @layout-header-height;
+  z-index: 100;
+  &.navbar-light {
+    background-color: @theme-light-color;
+    a {
+      color: rgba(0, 0, 0, 0.65);
+    }
+    a:hover {
+      color: rgba(0, 0, 0, 0.85);
+    }
+  }
+  &.navbar-dark {
+    color: #fcfcfc;
+    background-color: @theme-dark-color;
+    .ant-menu {
+      color: #fcfcfc;
+      background: transparent;
+    }
+    .ant-menu-horizontal .ant-menu-item-selected > a,
+    .ant-menu-horizontal .ant-menu-item-selected > a:hover {
+      color: #fff;
+    }
+    .ant-menu-horizontal > .ant-menu-item:hover,
+    .ant-menu-horizontal > .ant-menu-item-selected,
+    .ant-menu-horizontal > .ant-menu-submenu:hover {
+      border-bottom: 2px solid #fff;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.1);
+    }
+    .ant-menu-submenu-horizontal > .ant-menu-sub {
+      background: #fff;
+      .ant-menu-horizontal .ant-menu-item-selected > a {
+        color: #666;
+      }
+    }
+    .ant-menu-horizontal .ant-menu-item-selected > a,
+    .ant-menu-horizontal .ant-menu-item-selected > a:hover {
+      color: rgba(255, 255, 255, 1);
+    }
+    .navbar-anchor,
+    .navbar-corp,
+    .antd-pro-header-search-headerSearch .anticon-search,
+    .navbar-right .ant-badge,
+    .navbar-search .ant-input {
+      color: #fff;
+    }
+    a,
+    a:hover {
+      color: #fcfcfc;
+    }
+  }
+  &.navbar-transparent {
+    background-color: rgba(66, 66, 66, 0.4);
+    .navbar-corp {
+      color: #fff;
+    }
+  }
+}
+.navbar-spacer {
+  display: block;
+  padding-bottom: 48px;
+  &-hidden {
+    display: none;
+  }
+}
+.navbar-fixed-top {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  transform: translateZ(0px);
+}
+.navbar-corp {
+  line-height: 42px;
+  font-size: 14px;
+  margin-right: 16px;
+  .logo {
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    width: 32px;
+    height: 32px;
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border-radius: 32px;
+    margin-right: 8px;
+  }
+}
+.module-corp {
+  background-color: #546e7a;
+}
+.module-clearance {
+  background-color: #00887a;
+}
+.module-scof {
+  background-color: #4ecdc4;
+}
+.module-transport {
+  background-color: #e7b443;
+}
+.module-cwm {
+  background-color: #073fcc;
+}
+.module-dis {
+  background-color: #5a3bce;
+}
+.module-bss {
+  background-color: #ca5b58;
+}
+&.module-pts {
+  background-color: #5b8c00;
+}
+.navbar-left {
+  flex: 1;
+  display: inline-flex;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+  .navbar-brand {
+    padding: 0 24px;
+    width: 120px;
+    line-height: @layout-header-height;
+    height: @layout-header-height;
+    background-image: url('https://www.welogix.tech/images/logo.png');
+    background-size: auto 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.navbar-toggle {
+  display: inline-flex;
+  font-size: 16px;
+  color: #fcfcfc;
+  padding: 0 28px;
+  width: @layout-sider-width;
+  vertical-align: middle;
+  .anticon {
+    font-size: 24px;
+  }
+  > span {
+    margin-left: 8px;
+    line-height: 24px;
+  }
+  &.collapsed {
+    width: @layout-sider-collapsed-width;
+    > span {
+      display: none;
+    }
+  }
+  :hover {
+    color: #fcfcfc;
+  }
+}
+.navbar-anchor {
+  font-size: 24px;
+  text-align: center;
+  padding-left: 16px;
+  margin-right: -16px;
+  line-height: 48px;
+  width: @layout-sider-collapsed-width;
+  @media (max-width: 767px) {
+    width: 60px;
+    display: block;
+  }
+  &-close {
+    padding-right: 24px;
+    margin-right: 0;
+  }
+}
+.navbar-title {
+  line-height: @layout-header-height;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 16px;
+}
+.navbar-search {
+  margin-right: 16px;
+  @media (max-width: 960px) {
+    display: none;
+  }
+}
+.navbar-center {
+  flex: 1;
+  display: inline-flex;
+}
+.navbar-right {
+  display: inline-flex;
+  .ant-menu-horizontal > .ant-menu-item-selected {
+    border-bottom: 2px solid transparent;
+    background: transparent;
+  }
+  .ant-menu-horizontal > .ant-menu-item {
+    margin-right: 8px;
+  }
+  .ant-menu-horizontal > .ant-menu-submenu {
+    margin-right: 24px;
+  }
+
+  @media (max-width: 840px) {
+    display: none;
+  }
+}
+.navbar-avatar {
+  max-width: 32px;
+  max-height: 32px;
+  border-radius: 50%;
+}
+.navbar-popover,
+.apps-popover {
+  width: 160px;
+  .ant-popover-inner-content {
+    padding: 4px 0;
+  }
+}
+.navbar-popover {
+  .ant-menu-vertical > .ant-menu-item {
+    font-size: 14px;
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background-color: transparent;
+  }
+  .ant-menu-item-selected > a {
+    color: #666;
+  }
+  .qrcode {
+    padding-left: 16px;
+    margin-top: -16px;
+  }
+}
+.apps-popover {
+  .ant-menu-vertical > .ant-menu-item {
+    font-size: 16px;
+    .anticon {
+      font-size: 20px;
+    }
+  }
+}
+.antd-pro-header-search-headerSearch .anticon-search {
+  font-size: 24px;
+  vertical-align: middle;
+}

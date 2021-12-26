@@ -1,0 +1,42 @@
+.welo-row-action {
+  border: none;
+  box-shadow: none;
+  color: #1890ff;
+  &.success {
+    .anticon {
+      color: #52c41a;
+    }
+    color: rgba(0, 0, 0, 0.65);
+  }
+  &.silent {
+    .anticon {
+      color: #ccc;
+    }
+    color: #fff;
+  }
+  &.silent:hover {
+    .anticon {
+      color: #1890ff;
+    }
+    color: #1890ff;
+  }
+}
+.ant-tag + .welo-row-action,
+.welo-row-action + .welo-row-action {
+  margin-left: 8px;
+}
+.welo-row-action.ant-btn[disabled] {
+  .anticon {
+    color: rgba(0,0,0,.25);
+  }
+}
+.welo-row-action.ant-btn-danger {
+  color: rgba(0, 0, 0, 0.65);
+  background-color: #fff;
+  
+}
+.welo-row-action.ant-btn-danger:hover {
+  .anticon {
+    color: #f5222d;
+  }
+}

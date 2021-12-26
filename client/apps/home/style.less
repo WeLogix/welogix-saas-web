@@ -1,0 +1,70 @@
+.home {
+  &-header {
+    >img {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 180px;
+      width: 100%;
+    }
+    .tenant {
+      &-info {
+        position: relative;
+        height: 188px;
+        padding: 30px 0;
+      }
+      &-logo {
+        position: relative;
+        margin: 0 auto;
+        width: 64px;
+        .anticon {
+          font-size: 36px;
+          line-height: 2em;
+        }
+      }
+      &-name {
+        position: relative;
+        margin: 28px 0 5px;
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0,0,0,.25);
+      }
+    }
+    &-bg {
+      background-color: #0071b2;
+      background-image: url(https://static-cdn.welogix.cn/images/home-bg.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center top;
+    }
+  }
+  &-nav {
+    position: relative;
+    top: 0;
+    margin: 0 auto;
+    border-bottom: none;
+    z-index: 30;
+    background: #fff;
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.1);
+    .ant-menu {
+      width: 500px;
+      margin: 0 auto;
+      font-size: 16px;
+    }
+    .ant-menu-horizontal {
+      border-bottom: none;
+      > .ant-menu-item {
+        padding: 0 28px;
+        margin-right: 14px;
+      }
+    }
+  }
+  &-body {
+    .ant-list-item-extra {
+      margin-left: 48px;
+      font-size: 12px;
+      color: #ccc;
+    }
+  }
+}

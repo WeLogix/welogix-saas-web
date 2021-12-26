@@ -1,0 +1,14 @@
+*.log
+node_modules
+log/*
+public/dist
+public/assets*.json
+public/assets/langs/zh.json
+public/assets/langs/diff-en.json
+.DS_Store
+test.js
+.happypack/*
+.vscode
+.idea
+.tern-project
+package-lock.json

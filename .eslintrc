@@ -1,0 +1,49 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack/wpbase.js"
+      }
+    }
+  },
+  "globals": {
+    "__CLIENT__": true,
+    "__CDN__": true,
+    "XLSX_CDN": true,
+    "webpackIsomorphicTools": false,
+    "__DEV__": false,
+    "__PROD__": false,
+    "__DEVTOOLS__": false,
+    "API_ROOTS": false,
+    "Notification": true,
+    "window": true,
+    "document": true,
+    "jest": true,
+    "describe": true,
+    "beforeEach": true,
+    "it": true,
+    "expect": true
+  },
+  "rules": {
+    "no-underscore-dangle": 0,
+    "global-require": 0,
+    "import/prefer-default-export": 0,
+    "react/require-default-props": 0,
+    "react/jsx-closing-tag-location":0,
+    "react/prop-types":0,
+    "react/no-did-mount-set-state":0,
+    "jsx-a11y/click-events-have-key-events":0,
+    "jsx-a11y/no-static-element-interactions":0,
+    "jsx-a11y/anchor-is-valid":0,
+    "no-plusplus":["error", { "allowForLoopAfterthoughts": true }],
+    "comma-dangle": ["error", {
+    "arrays": "always-multiline",
+    "objects": "always-multiline",
+    "imports": "always-multiline",
+    "exports": "always-multiline",
+    "functions": "ignore"
+    }]
+  }
+}

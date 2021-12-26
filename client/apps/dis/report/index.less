@@ -1,0 +1,165 @@
+@boxshadow: 0 2px 2px 0 rgba(60,72,85,.24), 0 0 2px 0 rgba(60,72,85,.12);
+.drop-area() {
+  margin-right: 8px;
+  display: inline-block;
+  padding-left: 12px;
+  line-height: 32px;
+  width: 140px;
+  height: 32px;
+  background-color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+}
+.drag-item {
+  display: flex;
+  /*justify-content: space-between;*/
+  align-items: center;
+  font-size: 12px;
+  height: 32px;
+  text-align: left;
+  line-height: 32px;
+  margin: 4px 0;
+  padding-left: 8px;
+  &:hover {
+    cursor: move;
+    border-radius: 4px;
+    box-shadow: @boxshadow,
+  }
+  .ant-tag {
+    position: absolute;
+    right: 4px;
+  }
+}
+
+.filter-group {
+  margin-left: 100px;
+  .filter-symbol {
+    position: relative;
+    left: -110px;
+  }
+  .drop-area {
+    .drop-area();
+    border: dashed 1px #d9d9d9;
+    box-shadow: none;
+    color: #c1c9cf;
+    &-fill {
+      .drop-area();
+      box-shadow: @boxshadow;
+      border: solid 1px #fff;
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+}
+.filter-box {
+  width: 700px;
+  .ant-timeline-item {
+    padding: 0 0 8px;
+  }
+  .divide-line {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: #919eab;
+    position: relative;
+    top: -23px;
+    &::before {
+      content: '';
+      display: block;
+      border-bottom: solid 1px #eee;
+    }
+    > .divide-text {
+      margin: 0 auto;
+      width: 80px;
+      background: #fff;
+      margin-top: -10px;
+      display: block;
+    }
+  }
+}
+
+.report-head-action-dropdown {
+  padding: 2px;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, .2);
+  .ant-menu-item {
+    line-height: 22px;
+    height: 22px;
+  }
+}
+
+.report-columns {
+  .ant-table-thead > tr > th {
+    padding: 9px 0;
+    background-color: #fff;
+    .drop-area, .drop-area-fill {
+      display: inline-block;
+      width: 100%;
+      height: 36px;
+      line-height: 36px;
+      cursor: move;
+      .editable-cell {
+        min-width: 180px;
+      }
+      .editable-cell-text-wrapper {
+        line-height: 36px;
+      }
+    }
+  }
+  .ant-table-placeholder {
+    padding: 80px;
+  }
+}
+
+.report-side-list {
+  .ant-menu-item {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+    &:hover {
+      background-color: #fff;
+    }
+  }
+}
+
+.report-view-filter {
+  .filter-box {
+    border-right: none;
+  }
+  button + button {
+    margin-left: 8px;
+  }
+}
+
+.columns-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 0;
+  .report-column-config {
+    margin-right: 16px;
+    cursor: move;
+    .ant-card-body {
+      padding: 5px 1px;
+    }
+    .ant-card-actions > li {
+      margin: 7px 0;
+    }
+  }
+  .report-column-empty {
+    width: 170px;
+    text-align: center;
+    border: 1px dashed #e8e8e8;
+    margin-bottom: 15px;
+    height: 82;
+    line-height: 80px;
+    cursor: default;
+    color:#9a9393;
+    padding: 0 3px;
+    border-radius: 2px;
+  }
+  .ant-menu-item {
+    line-height: 22px;
+    height: 22px;
+  }
+}

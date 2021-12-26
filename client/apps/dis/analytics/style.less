@@ -1,0 +1,119 @@
+@boxshadow: 0 2px 2px 0 rgba(60, 72, 85, 0.24), 0 0 2px 0 rgba(60, 72, 85, 0.12);
+#analytics-list .ant-list-item {
+  height: 280px;
+}
+
+.clearfix::after {
+  content: '';
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  clear: both;
+  height: 0;
+}
+
+.drop-area() {
+  margin-right: 8px;
+  display: inline-block;
+  line-height: 32px;
+  width: 200px;
+  height: 32px;
+  background-color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+}
+
+.axis {
+  padding: 8px 16px 16px;
+  .ant-row {
+    height: 43px;
+  }
+  .drop-area {
+    .drop-area();
+    border: dashed 1px #d9d9d9;
+    box-shadow: none;
+    color: #c1c9cf;
+    margin-top: 11px;
+    &-fill {
+      .drop-area();
+      border: solid 1px #d9d9d9;
+      font-size: 14px;
+      font-weight: 500;
+      padding-right: 16px;
+      position: relative;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      top: 10px;
+      .anticon-close {
+        position: absolute;
+        right: 4px;
+        top: 9px;
+        color: rgba(0, 0, 0, 0.25);
+      }
+      .ant-input-group-wrapper {
+        width: auto;
+        position: relative;
+        left: -2px;
+        top: -2px;
+        .ant-input-group {
+          height: 34px;
+          .ant-input-group-addon {
+            padding: 0;
+            .ant-select {
+              margin: 0;
+              border: 1px solid #d9d9d9;
+              .ant-select-selection__rendered {
+                margin-right: 0;
+              }
+              .ant-select-arrow {
+                right: 4px;
+              }
+            }
+            .ant-btn {
+              border-radius: 0;
+              background: transparent;
+            }
+            .ant-btn:hover, .ant-btn:focus {
+              border-color: #d9d9d9;
+            }
+          }
+        }
+        .ant-input {
+          width: 0;
+          padding: 0;
+          border: none;
+        }
+      }
+    }
+    &-fill:hover {
+      box-shadow: @boxshadow;
+    }
+  }
+}
+
+.chartDataRange {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 16px;
+  padding-top: 16px;
+  .filter-box {
+    width: 50%;
+  }
+}
+
+.g2-tooltip {
+  position: absolute;
+  transition: visibility 0.2s cubic-bezier(0.23, 1, 0.32, 1) 0s, left 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s, top 0.4s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: rgb(174, 174, 174) 0px 0px 10px;
+  border-radius: 3px;
+  color: rgb(87, 87, 87);
+  font-size: 12px;
+  padding: 10px 10px 6px;
+  .g2-tooltip-list {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+  }
+}

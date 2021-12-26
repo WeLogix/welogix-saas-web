@@ -1,0 +1,163 @@
+.welo-tile {
+  margin-bottom: 8px;
+  margin-right: 8px;
+  transition: transform .218s ease,-webkit-transform .218s ease;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+  .ant-card {
+    width: 192px;
+    height: 192px;
+    margin-bottom: 0;
+    .ant-card-head {
+      height: 64px;
+      border-bottom: none;
+      .ant-card-head-title {
+        font-size: 16px;
+      }
+    }
+    .ant-card-body {
+      position: relative;
+      padding: 0;
+      height: 126px;
+      .ant-statistic {
+        line-height: 1;
+        margin-top: 20px;
+      }
+      .ant-statistic-title {
+        font-size: 12px;
+        color: rgba(0, 0, 0, 0.65);
+      }
+      .ant-statistic-content {
+        font-size: 40px;
+        .ant-statistic-content-prefix,
+        .ant-statistic-content-suffix {
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  &-sub-title {
+    position: absolute;
+    top: -32px;
+    padding: 4px 12px;
+    color: rgba(0, 0, 0, 0.45);
+  }
+  &-content {
+    display: flex;
+    position: relative;
+    width: 100%;
+    padding: 0 12px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  &-content-flex {
+    display: flex;
+  }
+  &-content-block {
+    display: block;
+    width: 100%;
+  }
+  &-content-fixed {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  }
+  &-icon {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 32px;
+    height: 32px;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+    .anticon {
+      font-size: 32px;
+      color: #ccc;
+    }
+  }
+  &-footer {
+    display: flex;
+    padding: 4px 12px;
+  }
+  &-timestamp {
+    flex: 1;
+    color: rgba(0, 0, 0, 0.25);
+  }
+  &-wide {
+    .ant-card {
+      width: 392px;
+      .ant-statistic {
+        line-height: 1;
+        margin-top: 0;
+      }
+      .ant-statistic-content {
+        font-size: 28px !important;
+      }
+    }
+  }
+  &-row-2 {
+    .stats-bar {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  }
+  &-col-2 {
+    .ant-statistic {
+      width: 183px;
+    }
+  }
+  &-col-3 {
+    .ant-statistic {
+      width: 122px;
+    }
+  }
+  &-col-4 {
+    .ant-statistic {
+      width: 91px;
+    }
+  }
+  &-lg {
+    width: 280px;
+    height: 280px;
+  }
+  &-sm {
+    margin-bottom: 8px;
+    margin-right: 8px;
+    width: 80px;
+    height: 80px;
+  }
+  &-processing {
+    .ant-statistic {
+      color: #1890ff;
+    }
+  }
+  &-warning {
+    .ant-statistic {
+      color: #faad14;
+    }
+  }
+  &-error {
+    .ant-statistic {
+      color: #f5222d;
+    }
+  }
+  &-success {
+    .ant-statistic {
+      color: #52c41a;
+    }
+  }
+}
+.welo-tile:hover {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+.welo-tile-container {
+  margin-bottom: 8px;
+  > h3 {
+    padding: 0 12px;
+  }
+}

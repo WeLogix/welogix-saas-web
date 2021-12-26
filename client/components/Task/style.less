@@ -1,0 +1,119 @@
+@import '~antd/lib/style/themes/default.less';
+
+.welo-task {
+  transition: transform .218s ease,-webkit-transform .218s ease;
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  .ant-card {
+    border-left-width: 3px;
+    .ant-card-head {
+      border-bottom: none;
+      .ant-card-head-title {
+        padding: 16px 0;
+        height: 56px;
+        .ant-typography {
+          padding-left: 36px;
+        }
+        .ant-typography-edit-content {
+          // border: 1px solid @error-color;
+          display: inline-block;
+          width: 90%;
+          padding: 0;
+          padding-left: 36px;
+          .ant-input {
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+        .ant-checkbox-wrapper {
+          position: absolute;
+          top: 18px;
+          .ant-checkbox-checked .ant-checkbox-inner {
+            background-color: #d9d9d9;
+            border-color: #d9d9d9;
+          }
+        }
+        a {
+          display: inline-block;
+          width: 100%;
+          color: rgba(0, 0, 0, 0.65);
+        }
+      }
+    }
+    .ant-card-body {
+      padding-top: 0;
+      display: none;
+      .select-combobox,
+      .ant-calendar-picker {
+        width: 100%;
+      }
+      .ant-typography {
+        // border: 1px solid @success-color;
+        margin-bottom: 0;
+      }
+      .ant-typography-edit-content {
+        // border: 1px solid @error-color;
+        margin-bottom: -1px;
+      }
+    }
+  }
+  &-content-wrapper {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    transition: all 0.3s;
+    .ant-typography {
+      padding: 4px 11px;
+      min-height: 30px;
+    }
+    .ant-typography-edit-content {
+      padding: 0;
+      padding-top: 4px;
+      padding-left: 11px;
+      margin-right: -13px;
+    }
+  }
+  &-expanded {
+    .ant-card {
+      .ant-card-body {
+        display: block;
+      }
+    }
+  }
+  &-critical {
+    .ant-card,
+    .ant-card:hover {
+      border-left-color: @error-color;
+    }
+  }
+  &-high {
+    .ant-card,
+    .ant-card:hover {
+      border-left-color: @warning-color;
+    }
+  }
+  &-normal {
+    .ant-card,
+    .ant-card:hover {
+      border-left-color: @normal-color;
+    }
+  }
+  &-done {
+    .ant-card {
+      opacity: 0.5;
+      background-color: @disabled-bg;
+      border-left-color: @normal-color;
+    }
+  }
+}
+.welo-task:hover {
+  -webkit-transform: translateX(2px);
+  transform: translateX(2px);
+}
+.welo-task-list {
+  padding-right: 2px;
+  .welo-task:last-child {
+    .ant-card {
+      margin-bottom: 0;
+    }
+  }
+}

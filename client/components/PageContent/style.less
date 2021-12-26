@@ -1,0 +1,38 @@
+.page-content {
+  position: relative;
+  padding: 16px 16px 0;
+  overflow-x: auto;
+  min-width: 944px;
+  &-with-pinned-dropdown {
+    padding-left: 216px;
+  }
+  &-no-page-header {
+    padding: 24px 16px 0;
+  }
+  &.no-page-header {
+    padding: 24px 16px 0;
+  }
+  &-readonly,
+  &.readonly {
+    .ant-input[disabled],
+    .ant-select-disabled,
+    .ant-select-auto-complete.ant-select .ant-input[disabled] {
+      color: #666;
+    }
+  }
+  &-deleted,
+  &.deleted {
+    .ant-input[disabled],
+    .ant-select-disabled,
+    .ant-select-auto-complete.ant-select .ant-input[disabled],
+    .ant-table-tbody > tr > td {
+      text-decoration-line: line-through;
+    }
+  }
+  @media (max-width: 767px) {
+    min-width: auto;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}

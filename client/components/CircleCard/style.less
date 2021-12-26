@@ -1,0 +1,60 @@
+.welo-circle-card {
+  width: 166px;
+  height: 166px;
+  margin-bottom: 16px;
+  &-lg {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .ant-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin-bottom: 0;
+    .ant-card-head {
+      position: absolute;
+      bottom: -40px;
+      font-size: 14px;
+      font-weight: 400;
+      width: 100%;
+      text-align: center;
+      border-bottom: none;
+    }
+    .ant-card-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      height: 100%;
+    }
+    .ant-card-meta-avatar {
+      float: none;
+      padding-right: 0;
+    }
+    .ant-card-meta-title {
+      font-size: 32px;
+      line-height: 36px;
+      margin-top: 28px;
+    }
+  }
+  &-sm {
+    width: 56px;
+    height: 56px;
+    margin-right: 140px;
+    .ant-card-body {
+      padding: 0;
+    }
+    .ant-card-meta-title {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      line-height: 80px !important;
+    }
+    .ant-card-meta-description {
+      position: absolute;
+      top: 18px;
+      right: -90px;
+      width: 100px;
+    }
+  }
+}
